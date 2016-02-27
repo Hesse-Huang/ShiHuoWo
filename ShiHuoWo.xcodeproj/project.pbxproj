@@ -12,9 +12,11 @@
 		86920EEF1C730244003EB814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86920EED1C730244003EB814 /* Main.storyboard */; };
 		86920EF11C730244003EB814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86920EF01C730244003EB814 /* Assets.xcassets */; };
 		86920EF41C730244003EB814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86920EF21C730244003EB814 /* LaunchScreen.storyboard */; };
+		B2FF5ED21BD89DCBB07EA906 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C545A236115B57802ADD89BA /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D9747E921F58DDC249BA70A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		86920EE61C730244003EB814 /* ShiHuoWo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiHuoWo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86920EE91C730244003EB814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86920EEB1C730244003EB814 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		86920EF51C730244003EB814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86920EFB1C7302AD003EB814 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		86920EFC1C7302AD003EB814 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		C358330096F974822410EBB3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C545A236115B57802ADD89BA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2FF5ED21BD89DCBB07EA906 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				86920EE81C730244003EB814 /* ShiHuoWo */,
 				86920EE71C730244003EB814 /* Products */,
+				D3D9C662D3AE67109F62C049 /* Pods */,
+				A8E48E455F586F9F95C52A9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +73,23 @@
 			path = ShiHuoWo;
 			sourceTree = "<group>";
 		};
+		A8E48E455F586F9F95C52A9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C545A236115B57802ADD89BA /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3D9C662D3AE67109F62C049 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C358330096F974822410EBB3 /* Pods.debug.xcconfig */,
+				1D9747E921F58DDC249BA70A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -73,9 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86920EF81C730244003EB814 /* Build configuration list for PBXNativeTarget "ShiHuoWo" */;
 			buildPhases = (
+				E13CA99349D97715640CCA06 /* Check Pods Manifest.lock */,
 				86920EE21C730244003EB814 /* Sources */,
 				86920EE31C730244003EB814 /* Frameworks */,
 				86920EE41C730244003EB814 /* Resources */,
+				BCA5F100D3CFD287AE80DEF3 /* Embed Pods Frameworks */,
+				08CC19CFD6F3B36733F34BEF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08CC19CFD6F3B36733F34BEF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCA5F100D3CFD287AE80DEF3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E13CA99349D97715640CCA06 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		86920EE21C730244003EB814 /* Sources */ = {
@@ -249,6 +324,7 @@
 		};
 		86920EF91C730244003EB814 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C358330096F974822410EBB3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShiHuoWo/Info.plist;
@@ -260,6 +336,7 @@
 		};
 		86920EFA1C730244003EB814 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D9747E921F58DDC249BA70A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShiHuoWo/Info.plist;
@@ -288,6 +365,7 @@
 				86920EFA1C730244003EB814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
